@@ -8,10 +8,10 @@ import dagger.android.support.DaggerApplication;
 /**
  * @author Dhruvaraj Nagarajan
  */
-public class App extends DaggerApplication {
+public class Application extends DaggerApplication {
 
     @Override
     protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
-        return DaggerAppComponent.builder().create(this);
+        return DaggerAppComponent.factory().create(this);
     }
 }
